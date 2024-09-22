@@ -18,6 +18,8 @@ client = Groq(
     api_key = st.secrets.api.key,
     )
 
+st.write(st.secrets.api.key)
+
 
 # Get stock price function for AI
 def get_stock_price(ticker):
