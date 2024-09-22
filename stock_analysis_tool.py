@@ -155,6 +155,7 @@ if user_input:
             st.text("ERROR", response_message.content)
 
     except Exception as e:
+        st.write(e)
         st.write("Error fetching stock price: Please enter a valid Company name")
         
 if "function_response" in st.session_state and st.session_state.function_response != None:    
