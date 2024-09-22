@@ -18,9 +18,6 @@ client = Groq(
     api_key = st.secrets.api.key,
     )
 
-st.write(st.secrets.api.key)
-
-
 # Get stock price function for AI
 def get_stock_price(ticker):
     try:
@@ -155,6 +152,7 @@ if user_input:
             st.text("ERROR", response_message.content)
 
     except Exception as e:
+        print(e)
         st.write(e)
         st.write("Error fetching stock price: Please enter a valid Company name")
         
