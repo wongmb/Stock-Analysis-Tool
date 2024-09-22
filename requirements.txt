@@ -3,4 +3,4 @@ matplotlib==3.7.3
 streamlit==1.38.0
 yfinance==0.2.43
 groq==0.11.0
-currency_converter==0.17.31
+currencyconverter==0.17.31
