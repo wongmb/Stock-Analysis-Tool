@@ -9,11 +9,9 @@ from currency_converter import CurrencyConverter
 
 c = CurrencyConverter()
 
-# Initialize the Groq client with the provided API key
-st.write("Get free API Key here https://console.groq.com/keys")
 client = Groq(
-    api_key = st.text_input("Enter Groq API Key Here:"),
-)
+    api_key = st.secrets.api.key,
+    )
 
 # Define Streamlit Interface
 st.set_page_config(page_title = "Stock Analysis", layout = "wide")
