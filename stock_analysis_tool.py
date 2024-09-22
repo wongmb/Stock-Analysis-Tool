@@ -2,6 +2,8 @@ import json
 import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
+st.set_page_config(page_title = "Stock Analysis", layout = "wide")
+
 import yfinance as yf
 import os
 from groq import Groq
@@ -10,7 +12,6 @@ from currency_converter import CurrencyConverter
 c = CurrencyConverter()
 
 # Define Streamlit Interface
-st.set_page_config(page_title = "Stock Analysis", layout = "wide")
 st.markdown("<h1 style='text-align: center;'>Stock Analysis Tool</h1>", unsafe_allow_html = True)
 
 client = Groq(
