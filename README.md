@@ -1,1 +1,1 @@
-https://analysis-stock.streamlit.app/
+https://analysis-stock-tool.streamlit.app/
