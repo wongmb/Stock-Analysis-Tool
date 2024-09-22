@@ -1,0 +1,6 @@
+pandas
+matplotlib
+streamlit
+yfinance
+groq
+currency-converter
