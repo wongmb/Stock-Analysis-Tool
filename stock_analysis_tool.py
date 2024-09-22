@@ -18,16 +18,20 @@ client = Groq(
     api_key = st.secrets.api.key,
     )
 
-# Get stock price function for AI
 def get_stock_price(ticker):
     try:
-        stockData = yf.Ticker(ticker).history(period = "1d")
-        todaysData = stockData.Close.iloc[-1]
+        stockData = yf.Ticker(ticker).history(period="1d")
+        
+        # Check if the DataFrame is empty
+        if stockData.empty:
+            st.write("No data found for the given ticker. Please enter a valid company name.")
+            return None
+        
+        todaysData = stockData.Close.iloc[-1]  # Access the last closing price
         return todaysData
     
     except Exception as e:
-        st.write(e)
-        st.write("Error fetching stock price: Please enter a valid Company name")
+        st.write(f"Error fetching stock price: {e}. Please enter a valid Company name.")
         return None
 
 # Other functions
