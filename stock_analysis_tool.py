@@ -10,8 +10,9 @@ from currency_converter import CurrencyConverter
 c = CurrencyConverter()
 
 # Initialize the Groq client with the provided API key
+st.write("Get free API Key here https://console.groq.com/keys")
 client = Groq(
-    api_key = os.environ.get("GROQ_API_KEY"),
+    api_key = st.text_input("Enter Groq API Key Here:"),
 )
 
 # Define Streamlit Interface
