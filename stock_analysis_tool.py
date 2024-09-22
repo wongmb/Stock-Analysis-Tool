@@ -20,7 +20,7 @@ client = Groq(
 
 def get_stock_price(ticker):
     try:
-        stockData = yf.Ticker(ticker).history(period="1m")
+        stockData = yf.Ticker(ticker).history(period="5d")
         
         # Check if the DataFrame is empty
         if stockData.empty:
