@@ -9,13 +9,14 @@ from currency_converter import CurrencyConverter
 
 c = CurrencyConverter()
 
+# Define Streamlit Interface
+st.set_page_config(page_title = "Stock Analysis", layout = "wide")
+st.markdown("<h1 style='text-align: center;'>Stock Analysis Tool</h1>", unsafe_allow_html = True)
+
 client = Groq(
     api_key = st.secrets.api.key,
     )
 
-# Define Streamlit Interface
-st.set_page_config(page_title = "Stock Analysis", layout = "wide")
-st.markdown("<h1 style='text-align: center;'>Stock Analysis Tool</h1>", unsafe_allow_html = True)
 
 # Get stock price function for AI
 def get_stock_price(ticker):
