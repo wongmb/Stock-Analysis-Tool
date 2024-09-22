@@ -3,4 +3,4 @@ matplotlib
 streamlit
 yfinance
 groq
-currency-converter
+currencyconverter
