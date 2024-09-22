@@ -152,9 +152,7 @@ if user_input:
             st.text("ERROR", response_message.content)
 
     except Exception as e:
-        print(e)
-        st.write(e)
-        st.write("Error fetching stock price: Please enter a valid Company name")
+        st.write("Error fetching stock price: Please enter a valid Company name {e}")
         
 if "function_response" in st.session_state and st.session_state.function_response != None:    
     currency = currencySelected.split(" ")
