@@ -26,7 +26,8 @@ def get_stock_price(ticker):
         return todaysData
     
     except Exception as e:
-        st.write("Error fetching stock price: Please enter a valid Company name {e}")
+        st.write(e)
+        st.write("Error fetching stock price: Please enter a valid Company name")
         return None
 
 # Other functions
