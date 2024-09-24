@@ -188,27 +188,27 @@ if "function_response" in st.session_state and st.session_state.function_respons
     
     col1, col2, col3, col4, col5, col6 = st.columns(6)
     with col1:
-        if st.button("5D"):
+        if st.button("5D", help = "Change Time Period to 5 Days"):
             st.session_state.plotName = "5 Days"
             st.session_state.plotPeriod = "5d"
     with col2:
-        if st.button("1M"):
+        if st.button("1M", help = "Change Time Period to 1 Month"):
             st.session_state.plotName = "Month"
             st.session_state.plotPeriod = "1mo"
     with col3:
-        if st.button("6M"):
+        if st.button("6M", help = "Change Time Period to 6 Months"):
             st.session_state.plotName = "6 Months"
             st.session_state.plotPeriod = "6mo"
     with col4:
-        if st.button("1Y"):
+        if st.button("1Y", help = "Change Time Period to 1 Year"):
             st.session_state.plotName = "Year"
             st.session_state.plotPeriod = "1y"
     with col5:
-        if st.button("5Y"):
+        if st.button("5Y", help = "Change Time Period to 5 Years"):
             st.session_state.plotName = "5 Years"
             st.session_state.plotPeriod = "5y"
     with col6:
-        if st.button("Max"):
+        if st.button("Max", help = "Change Time Period to All Time"):
             st.session_state.plotPeriod = "max"
             st.session_state.plotName = "All Time"
 
