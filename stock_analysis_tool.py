@@ -181,7 +181,6 @@ if "function_response" in st.session_state and st.session_state.function_respons
     st.session_state.data = yf.Ticker(st.session_state.ticker).history(period = "1y").Close
 
     currency = currencySelected.split(" ")
-
     st.session_state.stockPrice = round(c.convert(st.session_state.stockPrice, st.session_state.currency, currency[1]), 2)
     st.session_state.currency = currency[1]
     st.session_state.currencySymbol = currency[0]
